@@ -1,9 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Hello World Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML API</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Hello World</h1>
+
+    <div class="login">
+        <h1>California House Price Prediction</h1>
+        
+        <form action="{{url_for('predict')}}" method="post">
+            
+            <input type="text" name="MedInc" placeholder="MedInc" required="required"><br>
+            <input type="text" name="HouseAge" placeholder="HouseAge" required="required"><br>
+            <input type="text" name="AveRooms" placeholder="AveRooms" required="required"><br>
+            <input type="text" name="AveBedrms" placeholder="AveBedrms" required="required"><br>
+            <input type="text" name="Population" placeholder="Population" required="required"><br>
+            <input type="text" name="AveOccup" placeholder="AveOccup" required="required"><br>
+            <input type="text" name="Latitude" placeholder="Latitude" required="required"><br>
+            <input type="text" name="Longitude" placeholder="Longitude" required="required"><br>
+            
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+            
+        </form>
+        <br>
+        <br>
+    </div>
+{{prediction_text}}  
 </body>
 </html>
